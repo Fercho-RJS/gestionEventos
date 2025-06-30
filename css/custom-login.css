@@ -1,0 +1,26 @@
+@import url(root.css);
+
+#general-login-body {
+  display: flex;
+  justify-self: center;
+  margin-top: 100px;
+}
+
+#login-container {
+  border-color: rgb(209, 209, 209);
+  border: #d3d3d3 solid 1px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px !important;
+}
+
+#notHasAcc-tag {
+  font-size: 12px !important;
+  text-align: end !important;
+}
+
+#login-container > #login-header {
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}

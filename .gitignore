@@ -1,0 +1,9 @@
+# Ignorar carpeta específica
+php/models/Parameters.php
+php/models/Database.php
+php/components/session_vars_test.php
+
+# Ignorar archivos temporales comunes
+*.log
+*.tmp
+*.bak

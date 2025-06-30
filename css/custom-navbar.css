@@ -1,0 +1,43 @@
+@import url(root.css);
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+nav a {
+  color: var(--custom-primary-text) !important;
+  transition: color 0.6s ease, text-decoration 1s ease !important;
+}
+
+nav a:hover {
+  color: var(--primary-inverted-color) !important;
+  text-decoration: solid !important;
+}
+
+.navbar-toggler {
+  color: var(--custom-primary-text) !important;
+  background-color: var(--custom-primary-text);
+}
+
+#tag-acceso {
+  text-decoration: none;
+  margin-left: 15px;
+  width: 60px;
+  text-align: center;
+  color: rgb(68, 68, 68) !important;
+  background-color: rgba(255, 255, 255, 0.87);
+  border-end-end-radius: 10px;
+  border-start-start-radius: 10px;
+  transition: background-color 0.5s ease, font-weight 0.5s ease, color 0.5s ease;
+}
+
+#tag-acceso:hover {
+  font-weight: bold !important;
+  color: var(--primary-color) !important;
+  background-color: var(--primary-inverted-color);
+}
+
+.bi-box-arrow-in-right {
+  font-size: 17px;
+  margin-right: 6px;
+}
