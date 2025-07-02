@@ -25,7 +25,7 @@
   <section id="general-login-body" class="">
     <div id="login-container">
       <div id="login-header" class="">
-        <h4 class="text-white"><img src="https://localhost/gest_events_system/public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
+        <h4 class="text-white"><img src="../../public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
       </div>
       <form action="#" method="POST">
         <div id="login-body">
