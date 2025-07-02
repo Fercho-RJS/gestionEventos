@@ -1,3 +1,8 @@
+<?php 
+  $_SESSION['pg_actual'] = 'login';
+  $pg_actual =  $_SESSION['pg_actual'];
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,13 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Iniciar sesión | E-Web.net</title>
 
-  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-  <link rel="icon" href="../../public/img/favicon/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/gestionEventos/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/gestionEventos/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+  <link rel="icon" href="/gestionEventos/public/img/favicon/icon.png" type="image/x-icon">
 
   <!--  Mantener al final  -->
-  <link rel="stylesheet" href="http://localhost/gest_events_system/css/custom-navbar.css">
-  <link rel="stylesheet" href="http://localhost/gest_events_system/css/custom-login.css">
+  <link rel="stylesheet" href="/gestionEventos/css/custom-navbar.css">
+  <link rel="stylesheet" href="/gestionEventos/css/custom-login.css">
 </head>
 
 <body>
@@ -25,7 +30,7 @@
   <section id="general-login-body" class="">
     <div id="login-container">
       <div id="login-header" class="">
-        <h4 class="text-white"><img src="../../public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
+        <h4 class="text-white"><img src="/gestionEventos/public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
       </div>
       <form action="#" method="POST">
         <div id="login-body">

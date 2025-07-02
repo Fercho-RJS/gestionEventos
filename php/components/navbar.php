@@ -1,15 +1,16 @@
 <?php
   session_start();
+  $pg_actual = $_SESSION['pg_actual'];
   require_once 'session_vars_test.php';
 ?>
 
 <head>
-  <link rel="stylesheet" href="../../css/custom-navbar.css">
+  <link rel="stylesheet" href="/gestionEventos/css/custom-navbar.css">
 </head>
 
 <nav class="navbar navbar-expand-lg bg-primary">
   <div class="container-fluid ">
-    <a translate="false" class="navbar-brand" href="http://localhost/gest_events_system/index.php"><img src="http://localhost/gest_events_system/public/img/logos/full_white.png" alt="Logotipo de la web" height="40"></a>
+    <a translate="false" class="navbar-brand" href="/gestionEventos/index.php"><img src="/gestionEventos/public/img/logos/full_white.png" alt="Logotipo de la web" height="40"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +32,7 @@
           if (!$_SESSION['user_logged']) { //Si no hay usuario logueado
           ?>
           <li class="nav-item">
-            <a class="nav-link" id="tag-acceso" href="public/pages/pg_login.php"><i class="bi bi-box-arrow-in-right"></i></a>
+            <a class="nav-link" id="tag-acceso" href="/gestionEventos/public/pages/pg_login.php"><i class="bi bi-box-arrow-in-right"></i></a>
           </li>
           <?php
           } else {
