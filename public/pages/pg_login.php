@@ -1,6 +1,6 @@
-<?php 
-  $_SESSION['pg_actual'] = 'login';
-  $pg_actual =  $_SESSION['pg_actual'];
+<?php
+$_SESSION['pg_actual'] = 'login';
+$pg_actual =  $_SESSION['pg_actual'];
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +23,11 @@
 <body>
   <header id="general-login-header">
     <?php
-      require_once '../../php/components/navbar.php';
+    require_once '../../php/components/navbar.php';
     ?>
   </header>
 
-  <section id="general-login-body" class="">
+  <section id="general-login-body" class="pb-4">
     <div id="login-container">
       <div id="login-header" class="">
         <h4 class="text-white"><img src="/gestionEventos/public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
@@ -47,16 +47,16 @@
         <div id="login-foot">
           <button type="submit" class="btn btn-sm btn-primary">Acceder</button>
         </div>
-        <a id="notHasAcc-tag" href="#" class="small d-flex mt-2 justify-content-center">No tengo una cuenta</a>
+        <a id="notHasAcc-tag" href="/gestionEventos/public/pages/pg_registro.php" class="small d-flex mt-2 justify-content-center">No tengo una cuenta</a>
       </form>
     </div>
   </section>
 
-  <?php 
-    //__DIR__ es una función de PHP que te dá la ruta de acceso donde está ubicado el archivo.
-    //Permite viajar entre carpetas más fácil.
-    
-    include __DIR__ . '/../../php/components/footer.php';
+  <?php
+  //__DIR__ es una función de PHP que te dá la ruta de acceso donde está ubicado el archivo.
+  //Permite viajar entre carpetas más fácil.
+
+  include __DIR__ . '/../../php/components/footer.php';
   ?>
 
 </body>

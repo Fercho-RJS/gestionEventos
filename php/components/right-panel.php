@@ -31,7 +31,7 @@
     <?php } else
     { ?>
       <div id="right-panel-header" class="mt-4 me-2 p-3">
-        <a href="#" id="btn-registrarse" class="btn btn-primary">Registrarse ahora</a>
+        <a href="/gestionEventos/public/pages/pg_registro.php" id="btn-registrarse" class="btn btn-primary">Registrarse ahora</a>
         <p class="small mt-2 text-center">¿Ya estas registrado? - <a href="./public/pages/pg_login.php">Acceder</a></p>
       </div>
     <?php }
