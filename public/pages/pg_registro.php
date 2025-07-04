@@ -42,13 +42,13 @@ $pg_actual =  $_SESSION['pg_actual'];
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
                 <span class="input-group-text" id="basic-addon1">Nombre/s</span>
-                <input type="text" maxlength="255" class="form-control" placeholder="Ej. Juan">
+                <input id="inp-nombre" type="text" maxlength="255" class="form-control" placeholder="Ej. Juan">
               </div>
             </div>
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
                 <span class="input-group-text" id="basic-addon1">Apellido/s</span>
-                <input type="text" maxlength="255" class="form-control" placeholder="Ej. Ramirez">
+                <input id="inp-apellido" type="text" maxlength="255" class="form-control" placeholder="Ej. Ramirez">
               </div>
             </div>
           </div>
@@ -57,13 +57,13 @@ $pg_actual =  $_SESSION['pg_actual'];
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
                 <span class="input-group-text" id="basic-addon1">Correo Electrónico</span>
-                <input type="email" class="form-control" placeholder="Ej. alguien@example.com">
+                <input id="inp-email" type="email" class="form-control" placeholder="Ej. alguien@example.com">
               </div>
             </div>
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
                 <span class="input-group-text" id="basic-addon1">Telefono</span>
-                <input type="text" maxlength="20" class="form-control" placeholder="...">
+                <input id="inp-telefono" type="text" maxlength="20" class="form-control" placeholder="...">
               </div>
             </div>
           </div>
@@ -72,8 +72,8 @@ $pg_actual =  $_SESSION['pg_actual'];
             <div class="col-12">
               <div class="input-group input-group-sm mt-2 mb-2">
                 <span class="input-group-text">Documento</span>
-                <input type="text" maxlength="12" class="form-control">
-                <select class="input-group-text text-start">
+                <input id="inp-documento" type="text" maxlength="10" class="form-control">
+                <select id="tipo-documento" class="input-group-text text-start">
                   <option selected disabled>Tipo</option>
                   <option value="1">D.N.I.</option>
                   <option value="2">Pasaporte</option>
@@ -86,20 +86,20 @@ $pg_actual =  $_SESSION['pg_actual'];
           <div class="row">
             <div class="col-4">
               <div class="input-group input-group-sm mb-2 mt-2">
-                <span class="input-group-text" id="basic-addon1">Domicilio</span>
-                <input type="email" class="form-control" placeholder="...">
+                <span class="input-group-text">Domicilio</span>
+                <input id="inp-domicilio" type="email" class="form-control" placeholder="...">
               </div>
             </div>
             <div class="col-4">
               <div class="input-group input-group-sm mb-2 mt-2">
-                <span class="input-group-text" id="basic-addon1">Altura</span>
-                <input type="email" class="form-control" placeholder="...">
+                <span class="input-group-text">Altura</span>
+                <input id="inp-domicilio-altura" type="email" class="form-control" placeholder="...">
               </div>
             </div>
             <div class="col-4">
               <div class="input-group input-group-sm mt-2">
                 <span class="input-group-text">Provincia</span>
-                <select class="form-select form-control text-start">
+                <select id="inp-provincia" class="form-select form-control text-start">
                   <option selected disabled>Seleccionar</option>
                 </select>
               </div>
@@ -109,19 +109,17 @@ $pg_actual =  $_SESSION['pg_actual'];
           <div class="row">
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
-                <span class="input-group-text" id="basic-addon1">Clave</span>
+                <span class="input-group-text" id="inp-contrasena">Clave</span>
                 <input type="email" class="form-control" placeholder="...">
               </div>
             </div>
             <div class="col-6">
               <div class="input-group input-group-sm mb-2 mt-2">
-                <span class="input-group-text" id="basic-addon1">Validar clave</span>
+                <span class="input-group-text" id="inp-val-contrasenia">Validar clave</span>
                 <input type="email" class="form-control" placeholder="...">
               </div>
             </div>
           </div>
-
-
         </div>
         <div id="registro-foot">
           <button type="submit" class="btn btn-sm btn-primary">Registrarse</button>
@@ -141,6 +139,27 @@ $pg_actual =  $_SESSION['pg_actual'];
 </body>
 
 <!--  Scripts  -->
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/gestionEventos/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/gestionEventos/node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+  $(document).ready(() => {
+    // console.log('Funciona jquery');
+
+    //Controla el tipo de documento, y cambia la longitud de carácteres.
+    $('#tipo-documento').change(() => {
+      switch ($('#tipo-documento').val()) {
+        case '1':
+          $('#inp-documento').attr('maxlength', 8);
+          break;
+        case '2':
+          $('#inp-documento').attr('maxlength', 9);
+          break;
+        case '3':
+          $('#inp-documento').attr('maxlength', 12);
+          break;
+      }
+    });
+  });
+</script>
 
 </html>
