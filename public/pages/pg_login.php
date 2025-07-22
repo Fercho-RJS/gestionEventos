@@ -32,6 +32,13 @@ $pg_actual =  $_SESSION['pg_actual'];
       <div id="login-header" class="">
         <h4 class="text-white"><img src="/gestionEventos/public/img/logos/color.png" alt="Imagen del login" class="w-auto"></h4>
       </div>
+      <!-- En caso de errores al rellenar los datos -->
+      <?php if (isset($_GET['err']) && $_GET['err'] = "400"){ ?>
+        <div class="alert alert-danger small mt-3 mb-2 text-center" role="alert">
+          No has completado todos los campos solicitados
+        </div>
+      <?php } //end if ?>
+      
       <form action="#" method="POST">
         <div id="login-body">
           <div class="input-group input-group-sm mb-2 mt-2">

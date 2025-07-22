@@ -32,10 +32,14 @@ $pg_actual =  $_SESSION['pg_actual'];
       <div id="registro-header" class="">
         <h4 class="text-white"><img src="/gestionEventos/public/img/logos/color.png" alt="Imagen del registro" class="w-auto"></h4>
       </div>
+
       <!-- En caso de errores al rellenar los datos -->
-      <div class="alert alert-danger small mt-3 mb-2 text-center" role="alert">
-        No has completado todos los campos solicitados
-      </div>
+      <?php if (isset($_GET['err']) && $_GET['err'] = "400"){ ?>
+        <div class="alert alert-danger small mt-3 mb-2 text-center" role="alert">
+          No has completado todos los campos solicitados
+        </div>
+      <?php } //end if ?>
+
       <form action="#" method="POST" id="form-registro">
         <div id="registro-body" class="mb-1">
           <div class="row">
